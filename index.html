@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>VueLearn</title>
+</head>
+<body>
+    <div id="app" style="margin:1em; width:20em;">
+        <span><h2>Первое число:</h2></span>
+        <!-- Задаём идентичные св-вам firstNumber и secondNumber id инпутам. -->
+       <!--  Вешаем хэндлер inputChanged на событие change. -->
+        <!-- Привязываем значение формы к указанному св-ву. -->
+        <input class='form-control'
+            id='firstNumber'
+            v-on:change='inputChanged'
+            type='number'
+            v-bind:value='firstNumber' 
+        > 
+        <span><h2>Второе число:</h2></span>
+        <input class='form-control'
+            id='secondNumber'
+            v-on:change='inputChanged'
+            type='number'
+            v-bind:value='secondNumber'
+        >
+        <br/>
+        <span class="badge badge-success"><h3>Результат: {{result}}</h3></span>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
